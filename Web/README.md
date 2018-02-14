@@ -1,44 +1,38 @@
-﻿# VSExpressApp
-I have got a route working on /test which uses pug and React routing to views/index2/pug via routes/index.ts
+﻿# Express, React, Node, Typrescript Stack
 
-NOTE Currently bundle.js contains all JS with embedded HTML under public/javascripts defined in app.ts.	
+## Objective
 
-NOTE:
+I wanted a common language stack - or as near as I could get. I've previously been an enthusiast of the MEAN stack. I wanted to move to typescript to get its advantage.
+I considered Angular 2 which I have used, but fancied trying React which look a little cleaner.
+
+This project started our as the template gereated by Visual Sudio for an Express.js application and orginally used PUG (previously JADE). I coverted it to used React rendered on the server
+and mounted on the client.
+
+Here's what I've got so far.
+
+* Typescript throughout (except where HTML is required of course).
+* React (tsx files) on front end and server.
+* Pass throgh values from server to client (there's probably a better way to do this than my implementation)
+* Custom render engine.
+* Bootstrap 4.
+* Build notifier for webpack.
+* Configured webpack to bundle javascript based on server side rendered page.
+
+## TODO
+
+There's lot's more I want to do. Here's a list.
+
+* Understand package.json scripts start (I don't think this is quite correct or properly used).
+* Live updating so I don't need to restart Visual Studio on every change.
+* Migrate to WebStorm (for comparison of IDE experiences).
+* Client side REST client.
+* Server side REST API.
+* Event binding on client.
+* Add UI tests framework
+* Add unit tests framework
+* (May be) Might be nice to use PUG instead of HTML in React components
+
+## NOTES:
 Evntually figured out that VS uses it's own compiler so Webpack should be used simply to package everything up into bundle.js
-
-TODO
-	1. DONE The only way I can currently get bundle create is by running webpack on the command line. NEED TO RUN AFTER BUILD.
-		HOW DO I RUN WEBPACK AT BUILD TIME
-		a. Installed VS extension webpack task runner.
-		b. Also installed build notifier as described here...
-			https://sochix.ru/how-to-integrate-webpack-into-visual-studio-2015/
-			It started working on VS build but I am not sure how. 
-
-			Also useful
-			https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebPackTaskRunner
-			
-	1.5 Note sure on config of package.json, scripts
-
-	2. Bundle.js only generated at route, needs to go into public/javascript.
-		PARTICALLY SOLVED - CHanged webpack.config.js - But look at this further.
-
-	3. What happens when build is invoked. In other words how does this know to run the ts transpiler.
-
-	4. Is there a way of bundling not everything but what needed for a particular top level parent page.
-
-Next
-	GAVE UP: Use pug in React component
-	Review builds process, make sure
-		It builds everything from clean
-		See point below - build with separate compinents not one big file . Option in tsconfig
-
-	Make sure everything is rebuild on save?? or certainly such that we can keep running and update pug and then just refresh page.
-
-
-
-	Look at
-		how do I include only the components I need for a page written in react (don't really want a massive .js file with everything in it)
-
-
-SETUP
-	Installed Task Runner Explorer extension for running webpack after build.
+Webpack only used for bundling .js files and generating source map (Build uses Visual Studio typescript compiler).
+Installed WebPackTest Runner extension (https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebPackTaskRunner)
