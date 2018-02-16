@@ -22,6 +22,7 @@ Here's what I've got so far.
 
 There's lot's more I want to do. Here's a list.
 
+* Refactor into server client side code.
 * Understand package.json scripts start (I don't think this is quite correct or properly used).
 * Live updating so I don't need to restart Visual Studio on every change.
 * Migrate to WebStorm (for comparison of IDE experiences).
@@ -31,6 +32,8 @@ There's lot's more I want to do. Here's a list.
 * Add UI tests framework
 * Add unit tests framework
 * (May be) Might be nice to use PUG instead of HTML in React components
+* Tidy directory structure (do I need dist anymore).
+* How should project be deployed?
 
 ## NOTES:
 Evntually figured out that VS uses it's own compiler so Webpack should be used simply to package everything up into bundle.js
