@@ -81,7 +81,7 @@
     <Compile Include="client\users.tsx">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="engine.tsx">
+    <Compile Include="server\engine.tsx">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="server\views\error.tsx">

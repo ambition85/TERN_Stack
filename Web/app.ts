@@ -2,23 +2,17 @@
 import express = require('express');
 import path = require('path');
 
-import routes from './routes/index';
-import users from './routes/user';
+import routes from './server/routes/index';
+import users from './server/routes/user';
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-//app.set('view engine', 'pug');
-
-//app.set('view engine', 'jsx');
-//app.engine('jsx', require('express-react-views').createEngine());
-
-app.engine('js', require('./engine'));
+app.engine('js', require('./server/engine'));
 app.set('view engine', 'js');
 
 app.use(express.static(path.join(__dirname, 'public')));
-//app.use(express.static(path.join(__dirname, 'dist')));
 
 app.use('/', routes);
 app.use('/users', users);
@@ -31,9 +25,6 @@ app.use(function (req, res, next) {
 });
 
 // error handlers
-
-console.log("HELLO " + app.get('env'));
-console.log("HELLO " + process.env.NODE_ENV);
 
 // development error handler
 // will print stacktrace
