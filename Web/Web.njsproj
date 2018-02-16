@@ -64,14 +64,9 @@
   <ItemGroup>
     <Folder Include="client\" />
     <Folder Include="client\components\" />
-    <Folder Include="client\css\" />
-    <Folder Include="dist\" />
-    <Folder Include="dist\client\" />
-    <Folder Include="dist\client\components\" />
-    <Folder Include="dist\routes\" />
     <Folder Include="server\" />
-    <Folder Include="public\" />
-    <Folder Include="public\images\" />
+    <Folder Include="client\public\" />
+    <Folder Include="client\public\images\" />
     <Folder Include="public\javascripts\" />
     <Folder Include="public\stylesheets\" />
     <Folder Include="server\routes\" />

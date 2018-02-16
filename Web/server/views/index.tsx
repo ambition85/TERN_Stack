@@ -30,7 +30,7 @@ export class Index extends React.Component<StartProps, {}> {
                         Goto Users
                     </a>
                 </Layout>
-                <script src="./javascripts/index-bundle.js" />
+                <script src="./client/javascripts/index-bundle.js" />
             </div>
         );
     }

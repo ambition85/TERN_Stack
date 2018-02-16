@@ -22,7 +22,7 @@ Here's what I've got so far.
 
 There's lot's more I want to do. Here's a list.
 
-* Refactor into server client side code.
+* ~~Refactor into server client side code.~~
 * Understand package.json scripts start (I don't think this is quite correct or properly used).
 * Live updating so I don't need to restart Visual Studio on every change.
 * Migrate to WebStorm (for comparison of IDE experiences).

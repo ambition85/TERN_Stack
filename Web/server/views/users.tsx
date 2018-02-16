@@ -27,7 +27,7 @@ export class Users extends React.Component<StartProps,{}> {
                     <div id='users' data-users={userList}></div>
 
                 </Layout>
-                <script src="./javascripts/users-bundle.js" />
+                <script src="./client/javascripts/users-bundle.js" />
             </div>
         );
     }
