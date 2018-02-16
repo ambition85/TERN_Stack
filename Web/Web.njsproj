@@ -54,10 +54,10 @@
     <Content Include="package.json" />
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
-    <TypeScriptCompile Include="views\layout.tsx">
+    <TypeScriptCompile Include="server\views\layout.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="views\users.tsx">
+    <TypeScriptCompile Include="server\views\users.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
   </ItemGroup>
@@ -75,7 +75,7 @@
     <Folder Include="public\javascripts\" />
     <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
-    <Folder Include="views\" />
+    <Folder Include="server\views\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="client\users.tsx">
@@ -84,10 +84,10 @@
     <Compile Include="engine.tsx">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="views\error.tsx">
+    <Compile Include="server\views\error.tsx">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="views\index.tsx">
+    <Compile Include="server\views\index.tsx">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="webpack.config.js">
