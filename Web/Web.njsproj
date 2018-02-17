@@ -54,7 +54,6 @@
     <TypeScriptCompile Include="server\routes\user.ts" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
-    <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
     <TypeScriptCompile Include="server\views\layout.tsx">
       <SubType>Code</SubType>
@@ -66,12 +65,9 @@
   <ItemGroup>
     <Folder Include="client\" />
     <Folder Include="client\components\" />
-    <Folder Include="public\" />
     <Folder Include="server\" />
     <Folder Include="client\public\" />
     <Folder Include="client\public\images\" />
-    <Folder Include="public\javascripts\" />
-    <Folder Include="public\stylesheets\" />
     <Folder Include="server\routes\" />
     <Folder Include="server\views\" />
   </ItemGroup>
