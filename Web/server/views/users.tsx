@@ -1,7 +1,7 @@
 ﻿import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { LayoutProps, Layout } from "../views/layout";
+import { LayoutProps, Layout } from "./layout";
 
 export interface StartProps extends LayoutProps {
     users: any;
@@ -27,7 +27,8 @@ export class Users extends React.Component<StartProps,{}> {
                     <div id='users' data-users={userList}></div>
 
                 </Layout>
-                <script src="./client/javascripts/users-bundle.js" />
+                {/* These paths are relaive to the public(static) folder defined in Express middleware in app.tsx */}
+                <script src="./javascripts/users-bundle.js" />
             </div>
         );
     }

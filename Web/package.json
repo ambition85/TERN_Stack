@@ -1,12 +1,8 @@
 {
-  "name": "vsexpress-app",
+  "name": "erntstack",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "build": "webpack",
-    "start": "node run webpack --config webpack.config.js && nodemon --exec label-node -- app"
-  },
-  "description": "VSExpressApp",
+  "description": "A app that is all typescript using React on client and server.",
   "author": {
     "name": "Marco Christoforou",
     "email": "marco.christoforou@outlook.com"
@@ -19,7 +15,6 @@
     "body-parser": "^1.18.2",
     "debug": "^2.2.0",
     "express": "^4.16.2",
-    "nodemon": "^1.14.12",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
@@ -44,6 +39,7 @@
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.17.0",
     "eslint-plugin-react-pug": "^0.1.0",
+    "nodemon": "^1.15.0",
     "source-map-loader": "^0.2.3",
     "typescript": "^2.7.1",
     "webpack-notifier": "^1.5.1"

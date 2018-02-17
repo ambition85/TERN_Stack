@@ -22,20 +22,24 @@ Here's what I've got so far.
 
 There's lot's more I want to do. Here's a list.
 
+* Change name to TERN stack.
 * ~~Refactor into server client side code.~~
-* Understand package.json scripts start (I don't think this is quite correct or properly used).
+* Best practice error handling in rest calls
+* Intellisense code completion for bootstrap.
+* ~~Understand package.json scripts start (I don't think this is quite correct or properly used).~~
 * Live updating so I don't need to restart Visual Studio on every change.
 * Migrate to WebStorm (for comparison of IDE experiences).
-* Client side REST client.
-* Server side REST API.
-* Event binding on client.
+* ~~Client side REST client.~~
+* ~~Server side REST API.~~
+* ~~Event binding on client.~~
 * Add UI tests framework
 * Add unit tests framework
 * (May be) Might be nice to use PUG instead of HTML in React components
-* Tidy directory structure (do I need dist anymore).
+* ~~Tidy directory structure (do I need dist anymore).~~
 * How should project be deployed?
 
 ## NOTES:
 Evntually figured out that VS uses it's own compiler so Webpack should be used simply to package everything up into bundle.js
 Webpack only used for bundling .js files and generating source map (Build uses Visual Studio typescript compiler).
 Installed WebPackTest Runner extension (https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebPackTaskRunner)
+Uses AXIOS for client side Rest calls.

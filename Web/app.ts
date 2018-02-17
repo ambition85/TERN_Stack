@@ -3,19 +3,21 @@ import express = require('express');
 import path = require('path');
 
 import routes from './server/routes/index';
-import users from './server/routes/user';
+import user from './server/routes/user';
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'server/views'));
 app.engine('js', require('./server/engine'));
 app.set('view engine', 'js');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client/public')));
+
+console.log("X="+__dirname);
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/user', user);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

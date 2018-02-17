@@ -1,7 +1,7 @@
 ﻿import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { LayoutProps, Layout } from "../views/layout";
+import { LayoutProps, Layout } from "./layout";
 
 export interface StartProps extends LayoutProps {
     myinfo: string;
@@ -11,7 +11,7 @@ export class Index extends React.Component<StartProps, {}> {
 
     // Another method in the React component.
     hello() {
-        return "hello marco I'm here";
+        return "hello marco I'm here test";
     }
 
     render() {
@@ -30,7 +30,7 @@ export class Index extends React.Component<StartProps, {}> {
                         Goto Users
                     </a>
                 </Layout>
-                <script src="./client/javascripts/index-bundle.js" />
+                <script src="./javascripts/index-bundle.js" />
             </div>
         );
     }

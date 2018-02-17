@@ -6,6 +6,8 @@
     <Name>Web</Name>
     <RootNamespace>VSExpressApp</RootNamespace>
     <Environment>NODE_ENV=development</Environment>
+    <NodeExePath>
+    </NodeExePath>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -64,6 +66,7 @@
   <ItemGroup>
     <Folder Include="client\" />
     <Folder Include="client\components\" />
+    <Folder Include="public\" />
     <Folder Include="server\" />
     <Folder Include="client\public\" />
     <Folder Include="client\public\images\" />

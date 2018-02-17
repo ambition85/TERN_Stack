@@ -7,12 +7,13 @@ var index_1 = require("./server/routes/index");
 var user_1 = require("./server/routes/user");
 var app = express();
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'server/views'));
 app.engine('js', require('./server/engine'));
 app.set('view engine', 'js');
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client/public')));
+console.log("X=" + __dirname);
 app.use('/', index_1.default);
-app.use('/users', user_1.default);
+app.use('/user', user_1.default);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
