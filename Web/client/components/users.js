@@ -21,6 +21,7 @@ var Users = /** @class */ (function (_super) {
         return _this;
     }
     Users.prototype.render = function () {
+        // Generate an array of user elements.
         var userList = this.props.users.map(function (user) {
             return (React.createElement(user_1.User, { key: user.id, id: user.id, firstName: user.firstName, lastName: user.lastName }));
         });

@@ -23,11 +23,8 @@ var User = /** @class */ (function (_super) {
     User.prototype.removeUserClick = function (e) {
         e.preventDefault();
         console.log("Remove user click. id: " + this.props.id);
-        axios_1.default.delete('./user', {
-            params: {
-                id: this.props.id
-            }
-        })
+        axios_1.default
+            .delete('./user/' + this.props.id)
             .then(function (response) {
             console.log("Delete responsex: " + JSON.stringify(response.data));
         })

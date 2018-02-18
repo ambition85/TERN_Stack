@@ -1,7 +1,12 @@
 ﻿import * as React from "react";
 import Axios from "axios";
+import CUser from "../../server/models/user";
 
-export interface UserProps { id: string; firstName: string; lastName: string; }
+export interface UserProps {
+    id: string;
+    firstName: string;
+    lastName: string;
+}
 
 // Represent a single user in the list of users render by users.tsx
 
@@ -15,14 +20,8 @@ export class User extends React.Component<UserProps, {}> {
     removeUserClick(e: any) {
         e.preventDefault();
         console.log("Remove user click. id: " + this.props.id);
-        Axios.delete
-            ('./user',
-                {
-                    params: {
-                        id: this.props.id
-                    }
-                }
-            )
+        Axios
+            .delete('./user/' + this.props.id)
             .then((response) => {
                 console.log("Delete responsex: " + JSON.stringify(response.data));
 

@@ -1,20 +1,22 @@
 ﻿import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-// Componets we are going to use.
+// Component we are going to use.
 import { Users } from "./components/users";
+// Server side objects that we will represent in the UI
+import User from "../server/models/user";
 
 // Root element in DOM where we will mount React.
-var users = document.getElementById('users');
+var usersElement = document.getElementById('users');
 
 console.log("In users.tsx");
-console.log('=> User list as string: ' + users.dataset.users);
+console.log('=> User list as string: ' + usersElement.dataset.users);
 
-// Convert back to JSON object.
-var userList = JSON.parse(users.dataset.users);
+// Convert back to objects.
+let users:User[] = JSON.parse(usersElement.dataset.users);
 
-console.log('=> User list first object key: ' + userList[0].id);
-console.log('=> User list first object first name: ' + userList[0].firstName);
+console.log('=> User list first object key: ' + users[0].id);
+console.log('=> User list first object first name: ' + users[0].firstName);
 
 const element = (
     <div>
@@ -22,14 +24,17 @@ const element = (
             Here is a list of users
         </p>
         <p>
-            {users.dataset.users}
+            As a stringx
+            <br />
+            {JSON.stringify(users)}
         </p>
+        As a list of elements
         {/* Now we are on the client side we can pass as JSON object */}
-        <Users users={userList} />
+        <Users users={users} />
     </div>
 );
 
 ReactDOM.render(
     element,
-    users
+    usersElement
 );

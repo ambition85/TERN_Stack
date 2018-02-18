@@ -55,6 +55,7 @@ export class Layout extends React.Component<LayoutProps, {}> {
                     </div>
 
                     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" />
+                    {/* What is this for... */}
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" />
                     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" />
                     <script src="https://unpkg.com/react@16/umd/react.development.js" />

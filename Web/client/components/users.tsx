@@ -14,7 +14,8 @@ export class Users extends React.Component<UsersProps, {}> {
     }
 
     render() {
-        
+
+        // Generate an array of user elements.
         const userList = this.props.users.map((user) => {
             return (
                 <User key={user.id} id={user.id} firstName={user.firstName} lastName={user.lastName}>
@@ -22,6 +23,7 @@ export class Users extends React.Component<UsersProps, {}> {
             );
         })
         
+
         return (
             <div>
                 {userList}

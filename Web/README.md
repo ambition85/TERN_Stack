@@ -23,6 +23,10 @@ Here's what I've got so far.
 There's lot's more I want to do. Here's a list.
 
 * Change name to TERN stack.
+* Publish on GitHub.
+* Add ORM (use TypeORM).
+* Try using styles either specific to component or site wide or both.
+* User React router instead of Express router.
 * ~~Refactor into server client side code.~~
 * Best practice error handling in rest calls
 * Intellisense code completion for bootstrap.
@@ -36,6 +40,7 @@ There's lot's more I want to do. Here's a list.
 * Add unit tests framework
 * (May be) Might be nice to use PUG instead of HTML in React components
 * ~~Tidy directory structure (do I need dist anymore).~~
+* Host on AWS.
 * How should project be deployed?
 
 ## NOTES:

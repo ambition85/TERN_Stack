@@ -1,36 +1,23 @@
-﻿/*
- * GET home page.
- */
-import express = require('express');
-//import * as express from "express";
+﻿import * as Express from "express";
+import UsersController from "../controllers/users.controller";
 
-const router = express.Router();
+const router = Express.Router();
 
-router.get('/', (req: express.Request, res: express.Response) => {
+router.get('/', (req: Express.Request, res: Express.Response) => {
     res.render('index', { title: 'Home', myinfo: 'This is myInfo' });
 });
 
-router.get('/users', (req: express.Request, res: express.Response) => {
+router.get('/users', (req: Express.Request, res: Express.Response) => {
     console.log("Going to render users passing in a list of users that I will later get from a datasource.");
 
-    // TODO get from data source
-    let userList = [
-        {
-            id:"1",
-            firstName: "Marco",
-            lastName:"Christoforou"
-        },
-        {
-            id: "2",
-            firstName: "Lisa",
-            lastName:"Wood"
-        }
-    ];
+    const userCtrl = new UsersController();
 
-    console.log('First user key: ' + userList[0].id);
-    console.log('First user first name: ' + userList[0].firstName);
+    let users = userCtrl.read();
 
-    res.render('users', { title: 'Users', users: userList });
+    console.log('First user key: ' + users[0].id);
+    console.log('First user first name: ' + users[0].firstName);
+
+    res.render('users', { title: 'Users', users: users });
 });
 
 export default router;
