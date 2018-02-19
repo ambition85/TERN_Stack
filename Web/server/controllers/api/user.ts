@@ -1,13 +1,20 @@
 ﻿import * as Express from "express";
-import UsersController from "../controllers/users.controller";
+//import RepositoryInterface from "../repository/repository.interface";
+//import { RepType, RepositoryFactory } from "../repository/repository.factory";
+import * as Repository from "../../repository/repository";
 
 const router = Express.Router();
+
+const userRep: Repository.Interface = Repository.Factory.create(Repository.Type.USER);
 
 router.get(
     '/',
     (req: Express.Request, res: Express.Response) => {
         console.log("================ IN USER ROUTER ========================");
-        res.send("respond with a resource");
+
+        let users = userRep.read();
+
+        res.send(users);
     }
 );
 
@@ -19,10 +26,10 @@ router.delete(
 
         console.log("Received request to delete user with id: " + userId)
 
-        const userCtrl = new UsersController();
+        userRep.delete(userId);
 
-        userCtrl.delete(userId);
-
+        // TODO catch and send back error?
+        // TODO what should we send back in this case?
         res.send("Deleted a resource");
     }
 );

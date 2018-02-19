@@ -1,8 +1,12 @@
 ﻿import * as React from "react";
 
+// NOTE: An alternative here is to import * as User from... then use User.UserProps and User.User in the HTML.
 import { User, UserProps } from "./user";
 
-export interface UsersProps { users: UserProps[] }
+// A array of UserProps is required
+export interface UsersProps {
+    users: UserProps[]
+}
 
 // Represent a list of users on the UI using the user component
 

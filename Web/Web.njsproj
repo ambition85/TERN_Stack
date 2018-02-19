@@ -50,14 +50,17 @@
     <TypeScriptCompile Include="client\index.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="server\controllers\users.controller.ts">
+    <TypeScriptCompile Include="server\repository\repository.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="server\repository\user.rep.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="server\models\user.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="server\routes\index.ts" />
-    <TypeScriptCompile Include="server\routes\user.ts" />
+    <TypeScriptCompile Include="server\controllers\view\index.ts" />
+    <TypeScriptCompile Include="server\controllers\api\user.ts" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
@@ -74,9 +77,11 @@
     <Folder Include="server\" />
     <Folder Include="client\public\" />
     <Folder Include="client\public\images\" />
-    <Folder Include="server\controllers\" />
+    <Folder Include="server\controllers\api\" />
+    <Folder Include="server\controllers\view\" />
+    <Folder Include="server\repository\" />
     <Folder Include="server\models\" />
-    <Folder Include="server\routes\" />
+    <Folder Include="server\controllers\" />
     <Folder Include="server\views\" />
   </ItemGroup>
   <ItemGroup>

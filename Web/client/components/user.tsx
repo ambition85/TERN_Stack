@@ -21,7 +21,7 @@ export class User extends React.Component<UserProps, {}> {
         e.preventDefault();
         console.log("Remove user click. id: " + this.props.id);
         Axios
-            .delete('./user/' + this.props.id)
+            .delete('./api/user/' + this.props.id)
             .then((response) => {
                 console.log("Delete responsex: " + JSON.stringify(response.data));
 

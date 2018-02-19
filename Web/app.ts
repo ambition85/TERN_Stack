@@ -2,8 +2,8 @@
 import express = require('express');
 import path = require('path');
 
-import routes from './server/routes/index';
-import user from './server/routes/user';
+import views from './server/controllers/view/index';
+import apiUser from './server/controllers/api/user';
 
 var app = express();
 
@@ -16,8 +16,8 @@ app.use(express.static(path.join(__dirname, 'client/public')));
 
 console.log("X="+__dirname);
 
-app.use('/', routes);
-app.use('/user', user);
+app.use('/', views);
+app.use('/api/user', apiUser);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

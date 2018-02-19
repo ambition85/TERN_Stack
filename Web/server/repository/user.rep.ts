@@ -1,6 +1,7 @@
 ﻿import User from "../models/user";
+import * as Repository from "../repository/repository";
 
-export default class UsersController {
+export default class UserRep implements Repository.Interface {
     constructor() {
 
     }

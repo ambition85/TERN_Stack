@@ -11,6 +11,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
+// NOTE: An alternative here is to import * as User from... then use User.UserProps and User.User in the HTML.
 var user_1 = require("./user");
 // Represent a list of users on the UI using the user component
 var Users = /** @class */ (function (_super) {
