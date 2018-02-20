@@ -1,6 +1,4 @@
 ﻿import * as Express from "express";
-//import RepositoryInterface from "../repository/repository.interface";
-//import { RepType, RepositoryFactory } from "../repository/repository.factory";
 import * as Repository from "../../repository/repository";
 
 const router = Express.Router();

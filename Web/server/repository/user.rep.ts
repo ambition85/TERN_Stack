@@ -2,7 +2,34 @@
 import * as Repository from "../repository/repository";
 
 export default class UserRep implements Repository.Interface {
+
+    users: User[];
+
     constructor() {
+        let user: User = new User("3", "joe", "bloggs");
+
+        // Return all users.
+        // TODO get from data source
+        this.users = [
+        /*
+            {
+                id: "1",
+                firstName: "Marco",
+                lastName: "Christoforou"
+            }*/
+            new User("1", "Marco", "Christoforou")
+            ,
+        /*
+            {
+                id: "2",
+                firstName: "Lisa",
+                lastName: "Wood"
+            }*/
+            new User("2", "Lisa", "Wood")
+            ,
+            user
+        ];
+
 
     }
 
@@ -12,25 +39,7 @@ export default class UserRep implements Repository.Interface {
 
     read() {
 
-        let user: User = new User("3", "joe", "bloggs");
-
-        // Return all users.
-        // TODO get from data source
-        let users = [
-            {
-                id: "1",
-                firstName: "Marco",
-                lastName: "Christoforou"
-            },
-            {
-                id: "2",
-                firstName: "Lisa",
-                lastName: "Wood"
-            },
-            user
-        ];
-
-        return users;
+        return this.users;
     }
 
     update() {
