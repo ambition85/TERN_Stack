@@ -43,7 +43,7 @@ There's lot's more I want to do. Here's a list.
 * (May be) Might be nice to use PUG instead of HTML in React components
 * ~~Tidy directory structure (do I need dist anymore).~~
 * Host on AWS.
-* How should project be deployed?
+* How should project be deployed? 
 
 ## NOTES:
 Evntually figured out that VS uses it's own compiler so Webpack should be used simply to package everything up into bundle.js
