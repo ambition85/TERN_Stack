@@ -63,7 +63,6 @@
     <TypeScriptCompile Include="server\controllers\api\user.ts" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
     <TypeScriptCompile Include="server\views\layout.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
