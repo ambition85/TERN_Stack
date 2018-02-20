@@ -23,8 +23,8 @@ Here's what I've got so far.
 
 There's lot's more I want to do. Here's a list.
 
-* Change name to TERN stack.
-* Publish on GitHub.
+* ~~Change name to TERN stack.~~
+* ~~Publish on GitHub.~~
 * Add ORM (use TypeORM).
 * Add business layer.
 * Try using styles either specific to component or site wide or both.
