@@ -25,12 +25,15 @@ There's lot's more I want to do. Here's a list.
 
 * ~~Change name to TERN stack.~~
 * ~~Publish on GitHub.~~
-* Add ORM (use TypeORM).
+* Host on AWS.
 * Add business layer.
+* Add unit tests framework
+* Add UI tests framework
+* Add ORM (use TypeORM).
 * Try using styles either specific to component or site wide or both.
 * User React router instead of Express router.
 * ~~Refactor into server client side code.~~
-* Best practice error handling in rest calls
+* Best practice error handling in REST calls
 * Intellisense code completion for bootstrap.
 * ~~Understand package.json scripts start (I don't think this is quite correct or properly used).~~
 * Live updating so I don't need to restart Visual Studio on every change.
@@ -38,11 +41,8 @@ There's lot's more I want to do. Here's a list.
 * ~~Client side REST client.~~
 * ~~Server side REST API.~~
 * ~~Event binding on client.~~
-* Add UI tests framework
-* Add unit tests framework
 * (May be) Might be nice to use PUG instead of HTML in React components
 * ~~Tidy directory structure (do I need dist anymore).~~
-* Host on AWS.
 * How should project be deployed?
 
 ## NOTES:
