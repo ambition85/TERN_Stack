@@ -1,0 +1,17 @@
+{
+  "name": "unit-test",
+  "version": "0.0.0",
+  "description": "UnitTest",
+  "main": "app.js",
+  "author": {
+    "name": "Marco"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "@types/node": "^6.0.87",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1",
+    "ts-node": "^5.0.0"
+  }
+}

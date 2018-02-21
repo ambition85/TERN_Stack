@@ -27,7 +27,7 @@ There's lot's more I want to do. Here's a list.
 * ~~Publish on GitHub.~~
 * Host on AWS.
 * Add business layer.
-* Add unit tests framework
+* ~~Add unit tests framework~~
 * Add UI tests framework
 * Add ORM (use TypeORM).
 * Try using styles either specific to component or site wide or both.
