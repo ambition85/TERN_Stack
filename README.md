@@ -18,6 +18,7 @@ Here's what I've got so far.
 * Build notifier for webpack.
 * Configured webpack to bundle javascript based on server side rendered page.
 * Respository factory pattern.
+* Added Cucumberjs with tests run by Grunt.
 
 ## TODO
 
@@ -38,6 +39,7 @@ There's lot's more I want to do. Here's a list.
 * ~~Understand package.json scripts start (I don't think this is quite correct or properly used).~~
 * Live updating so I don't need to restart Visual Studio on every change.
 * Migrate to WebStorm (for comparison of IDE experiences).
+* Migrate to VSCode (for comparison of IDE experiences).
 * ~~Client side REST client.~~
 * ~~Server side REST API.~~
 * ~~Event binding on client.~~

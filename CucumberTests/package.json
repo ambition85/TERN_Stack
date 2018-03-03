@@ -1,0 +1,21 @@
+{
+  "name": "cucumber-tests",
+  "version": "0.0.0",
+  "description": "CucumberTests",
+  "main": "app.js",
+  "author": {
+    "name": "Marco"
+  },
+  "scripts": {
+    "cucumber": "cucumber.js ./features -r ./steps"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.87",
+    "cucumber": "^4.0.0",
+    "cucumber-tsflow": "^2.2.0",
+    "grunt": "^1.0.2",
+    "grunt-cli": "^1.2.0",
+    "grunt-shell": "^2.1.0"
+  },
+  "dependencies": {}
+}
