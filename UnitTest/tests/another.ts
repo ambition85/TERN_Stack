@@ -1,13 +1,18 @@
-﻿import assert = require('assert');
+﻿import { suite, test, slow, timeout } from "mocha-typescript";
+// Using assert here, rather than Chai.
+import assert = require('assert');
 import 'mocha';
 
-describe("Test Suite 1", () => {
-    it("Test A", () => {
+@suite('Test Suite 1')
+class YetAnother {
+    @test('Test A')
+    testA() {
         assert.ok(true, "This shouldn't fail");
-    });
+    }
 
-    it("Test B", () => {
+    @test('Test B')
+    testB() {
         assert.ok(1 === 1, "This shouldn't fail");
         assert.ok(false, "This should fail");
-    });
-});
+    }
+}

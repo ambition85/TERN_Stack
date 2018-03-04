@@ -1,10 +1,10 @@
 ﻿import { suite, test, slow, timeout } from "mocha-typescript";
 
-// ALternatie syntax using mocha typescript.
-@suite
-class Two {
-    @test
-    method() {
+// Alternatie syntax using mocha typescript.
+@suite('Yet another')
+class YetAnother {
+    @test('typescript test')
+    test1() {
         console.log('Hello from mocha-typescript');
     }
 }

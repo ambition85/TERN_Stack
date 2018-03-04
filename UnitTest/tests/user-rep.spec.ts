@@ -1,10 +1,12 @@
-﻿import UserRep from "../../Web/server/repository/user.rep";
+﻿import { suite, test, slow, timeout } from "mocha-typescript";
 import { expect } from 'chai';
-import 'mocha';
+import UserRep from "../../Web/server/repository/user.rep";
 
-describe('User repository function', () => {
-
-    it('should return at least one user', () => {
+// Alternatie syntax using mocha typescript.
+@suite('User repository')
+class UserRepTests {
+    @test('should return at least one user')
+    test1() {
         console.log("Hello from user rep test");
 
         const userRep: UserRep = new UserRep();
@@ -16,5 +18,5 @@ describe('User repository function', () => {
         console.log('Number of users retured by user rep: %i', numUsers);
 
         expect(numUsers).above(0, 'Did not get any users returned.');
-    });
-});
+    }
+}

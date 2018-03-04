@@ -58,3 +58,6 @@ Evntually figured out that VS uses it's own compiler so Webpack should be used s
 Webpack only used for bundling .js files and generating source map (Build uses Visual Studio typescript compiler).
 Installed WebPackTest Runner extension (https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebPackTaskRunner)
 Uses AXIOS for client side Rest calls.
+TS files with tests much have 'Mocha' in TestFramework file property in Visual Studio.
+## References
+Mocha TypeScript: https://www.npmjs.com/package/mocha-typescript
