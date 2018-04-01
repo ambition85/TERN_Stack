@@ -1,21 +1,21 @@
-﻿import { expect } from 'chai';
-import 'mocha';
+﻿import { suite, test, slow, timeout } from "mocha-typescript";
+import { expect } from 'chai';
 
-describe('Hello function', () => {
-
-
-    it('should return hello world', () => {
+@suite('Hello function')
+class HelloWorldTests {
+    @test('should return hello world')
+    test1() {
         console.log("Hello world test");
 
-        const result = 'Hello world!';//hello();
+        const result = 'Hello world!';
         expect(result).to.equal('Hello world!');
-    });
+    }
 
-    it('should not return hello world', () => {
+    @test('should not return hello world')
+    test2() {
         console.log("Not Hello world test");
 
         const result = 'Hello world!';//hello();
         expect(result).to.not.equal('Hello world!');
-    });
-
-});
+    }
+}

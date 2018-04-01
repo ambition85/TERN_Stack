@@ -1,12 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
-				bat 'echo Build stage started
+				bat 'echo Build stage started'
 				bat 'echo'
 				bat 'npm --version'
-				bat 'echo $WORKSPACE'
             }
         }
     }
