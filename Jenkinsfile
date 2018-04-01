@@ -6,6 +6,7 @@ pipeline {
 				bat 'echo Build stage started'
 				bat 'echo'
 				bat 'npm --version'
+				bat 'echo $WORKSPACE'
             }
         }
     }
