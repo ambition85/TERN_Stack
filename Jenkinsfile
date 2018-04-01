@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-				bat "echo Build stage started"
-				bat "echo"
-				bat "npm --version"
+				bat 'rem Build stage started'
+				bat 'rem'
+				bat 'npm --version'
 				bat 'rem %WORKSPACE%'
 				bat 'rem %PATH%'
-				bat "tsc"
+				bat 'tsc'
 				// bat "tsc --listEmittedFiles --listFiles --project $WORKSPACE\\Web"
             }
         }
