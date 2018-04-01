@@ -7,7 +7,7 @@ pipeline {
 				bat "echo"
 				bat "npm --version"
 				bat "echo $WORKSPACE"
-				bat 'echo %PATH%'
+				bat '%PATH%'
 				bat "tsc"
 				// bat "tsc --listEmittedFiles --listFiles --project $WORKSPACE\\Web"
             }
