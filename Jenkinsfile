@@ -6,8 +6,8 @@ pipeline {
 				bat "echo Build stage started"
 				bat "echo"
 				bat "npm --version"
-				bat "echo $WORKSPACE"
-				bat '%PATH%'
+				bat 'rem %WORKSPACE%'
+				bat 'rem %PATH%'
 				bat "tsc"
 				// bat "tsc --listEmittedFiles --listFiles --project $WORKSPACE\\Web"
             }
