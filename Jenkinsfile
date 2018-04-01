@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-				bat 'echo Build stage started
+				bat 'echo Build stage started'
 				bat 'echo'
 				bat 'npm --version'
             }
