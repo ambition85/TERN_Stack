@@ -6,7 +6,7 @@ pipeline {
         bat 'rem Build stage started'
         bat 'rem'
         bat 'npm --version'
-        bat 'rem "${WORKSPACE}"'
+        bat '"rem ${WORKSPACE}"'
         bat 'rem %PATH%'
         bat 'tsc'
       }
