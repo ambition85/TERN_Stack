@@ -6,7 +6,7 @@ pipeline {
         bat 'rem Build stage started'
         bat 'setlocal enableDelayedExpansion'
         bat 'npm --version'
-        bat 'rem !WORKSPACE!'
+        bat 'echo !WORKSPACE!'
         bat 'rem %PATH%'
         bat 'tsc'
       }
