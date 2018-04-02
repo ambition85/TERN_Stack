@@ -4,7 +4,7 @@ pipeline {
     stage('build') {
       steps {
         bat 'rem Build stage started'
-        bat 'rem'
+        bat 'setlocal enableDelayedExpansion'
         bat 'npm --version'
         bat 'rem !WORKSPACE!'
         bat 'rem %PATH%'
