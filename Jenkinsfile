@@ -3,12 +3,10 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        bat 'rem Build stage started'
-        bat 'setlocal enableDelayedExpansion'
-        bat 'npm --version'
-        bat 'echo !WORKSPACE!'
-        bat 'rem %PATH%'
-        bat 'tsc'
+        echo 'NPM Install in Web Project'
+        bat 'cd Web && npm install'
+        echo 'Transpile TS to JS'
+        bat 'tsc --project .\\Web --listEmittedFiles'
       }
     }
   }
