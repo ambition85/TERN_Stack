@@ -1,16 +1,15 @@
 pipeline {
-    agent any
-    stages {
-        stage('build') {
-            steps {
-				bat 'rem Build stage started'
-				bat 'rem'
-				bat 'npm --version'
-				bat "rem ${WORKSPACE}"
-				bat 'rem %PATH%'
-				// bat 'tsc'
-				// bat "tsc --listEmittedFiles --listFiles --project $WORKSPACE\\Web"
-            }
-        }
+  agent any
+  stages {
+    stage('build') {
+      steps {
+        echo 'NPM Install in Web Project'
+        bat 'cd Web && npm install'
+        echo 'Transpile TS to JS'
+        bat 'tsc --project .\\Web --listEmittedFiles'
+        echo 'Run Webpack to Package JS'
+        bat 'cd Web && webpack --mode development --display verbose'
+      }
     }
+  }
 }
