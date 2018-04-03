@@ -7,6 +7,8 @@ pipeline {
         bat 'cd Web && npm install'
         echo 'Transpile TS to JS'
         bat 'tsc --project .\\Web --listEmittedFiles'
+        echo 'Run Webpack to Package JS'
+        bat 'cd Web && webpack'
       }
     }
   }
