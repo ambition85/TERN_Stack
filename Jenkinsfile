@@ -9,7 +9,6 @@ pipeline {
         bat 'tsc --project .\\Web --listEmittedFiles'
         echo 'Run Webpack to Package JS'
         bat 'cd Web && webpack --mode development --display verbose'
-        mail(subject: 'Jenkins Build', body: 'Ok', from: 'Jenkins', to: 'marco.christoforou@nhs.net')
       }
     }
   }
