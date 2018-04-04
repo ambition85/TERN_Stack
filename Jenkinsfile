@@ -36,7 +36,7 @@ pipeline {
 	  // Jenkins documentation is incorrect. Brackets are required for slackSend.
 	  slackSend(channel: '#jenkins',
 				color:'good',
-				message 'Pipeline completed successfully'
+				message 'Pipeline completed successfully')
 	}
   }
 }
