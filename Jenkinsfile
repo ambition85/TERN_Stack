@@ -15,6 +15,8 @@ pipeline {
       steps {
         echo 'NPM Install in UnitTest Project'
         bat 'cd UnitTest && npm install'
+        echo 'Transpile TS to JS'
+        bat 'tsc --project .\\UnitTest --listEmittedFiles'
         echo 'Run Unit Tests'
         bat '.\\UnitTest\\node_modules\\.bin\\mocha .\\UnitTest\\tests'
       }
