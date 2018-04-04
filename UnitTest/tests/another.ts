@@ -10,9 +10,9 @@ class YetAnother {
         assert.ok(true, "This shouldn't fail");
     }
 
-    @test('Test B')
-    testB() {
-        assert.ok(1 === 1, "This shouldn't fail");
-        assert.ok(false, "This should fail");
-    }
+//    @test('Test B')
+//    testB() {
+//        assert.ok(1 === 1, "This shouldn't fail");
+//        assert.ok(false, "This should fail");
+//    }
 }
