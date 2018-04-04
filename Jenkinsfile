@@ -19,6 +19,9 @@ pipeline {
         bat 'tsc --project .\\UnitTest --listEmittedFiles'
         echo 'Run Unit Tests'
         bat 'set JUNIT_REPORT_PATH=.\\UnitTest\\reports\\report.xml&& .\\UnitTest\\node_modules\\.bin\\mocha .\\UnitTest\\tests --colors --reporter mocha-jenkins-reporter'
+        echo 'How to use Jenkins build variables'
+		bat 'setlocal enableDelayedExpansion&&echo workspace=!WORKSPACE!'
+
       }
     }
   }
