@@ -14,7 +14,7 @@ pipeline {
     stage('Unit Tests') {
       steps {
         echo 'How to use Jenkins build variables'
-        bat 'setlocal enableDelayedExpansion && echo workspace=!WORKSPACE!'
+        bat 'setlocal enableDelayedExpansion && echo workspace=!WORKSPACE! && echo jobname=!JOB_NAME! && echo fullDisplayName=!currentBuild.fullDisplayName!'
         echo 'NPM Install in UnitTest Project'
         bat 'npm set progress=false && cd UnitTest && npm install'
         echo 'Transpile TS to JS'
