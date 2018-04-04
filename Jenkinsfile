@@ -11,7 +11,7 @@ pipeline {
         bat 'cd Web && webpack --mode development --display verbose'
       }
     }
-    stage('test') {
+    stage('unit tests') {
       steps {
         bat '.\\UnitTest\\node_modules\\.bin\\mocha .\\UnitTest\\tests'
       }
