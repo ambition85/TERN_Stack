@@ -22,6 +22,9 @@ pipeline {
       junit '**\\*.xml'
       
     }
-    
+    failure {
+	  echo 'Slack Notifiy'
+      slackSend(message: 'Hello', baseUrl: 'https://maestrodataservices.slack.com/services/hooks/jenkins-ci/', channel: '#general', color: 'good', token: 'JqzmqX0rr0vCAKXIIMwg3N3g')
+	}
   }
 }
