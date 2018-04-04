@@ -31,7 +31,7 @@ pipeline {
     failure {
 	  echo 'Slack Notify of failure'
 	  // Jenkins documentation is incorrect. Brackets are required for slackSend.
-      slackSend(message: 'Pipeline failed',
+      slackSend(message: "Pipeline failed: ${JOB_NAME}",
 				channel: '#jenkins',
 				color: 'RED')
 	}
