@@ -18,13 +18,13 @@ pipeline {
         echo 'Transpile TS to JS'
         bat 'tsc --project .\\UnitTest --listEmittedFiles'
         echo 'Run Unit Tests'
-        bat 'set JUNIT_REPORT_PATH=.\\UnitTest\\report.xml&& .\\UnitTest\\node_modules\\.bin\\mocha .\\UnitTest\\tests --colors --reporter mocha-jenkins-reporter'
+        bat 'set JUNIT_REPORT_PATH=.\\UnitTests\\report.xml&& .\\UnitTest\\node_modules\\.bin\\mocha .\\UnitTest\\tests --colors --reporter mocha-jenkins-reporter'
       }
     }
-    post {
-        always {
-            junit '.\\UnitTest\\*.xml'
-        }
+	post {
+		always {
+			junit '.\\UnitTest\\*.xml'
+		}
 	}
   }
 }
