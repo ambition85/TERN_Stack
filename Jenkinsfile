@@ -1,6 +1,6 @@
 pipeline {
   agent any
-//  stages {
+	stages {
 //    stage('Build') {
 //      steps {
 //        echo 'NPM Install in Web Project'
