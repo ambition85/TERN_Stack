@@ -26,4 +26,5 @@ pipeline {
             junit '.\\UnitTest\\*.xml'
         }
 	}
+  }
 }
