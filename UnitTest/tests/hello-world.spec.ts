@@ -15,7 +15,7 @@ class HelloWorldTests {
     test2() {
         console.log("Not Hello world test");
 
-        const result = 'Hello worldx!';//hello();
+        const result = 'Hello world!';//hello();
         expect(result).to.not.equal('Hello world!');
     }
 }
