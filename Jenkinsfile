@@ -25,7 +25,7 @@ pipeline {
     failure {
 	  echo 'Slack Notifiy'
       slackSend(message: 'Hello', baseUrl: 'https://maestrodataservices.slack.com/services/hooks/jenkins-ci/', channel: '#general', color: 'good', token: 'JqzmqX0rr0vCAKXIIMwg3N3g')
-      slackSend(message: 'Hello', channel: '#general', color: 'good')
+      slackSend(message: 'Hello Again', channel: '#general', color: 'good')
 	}
   }
 }
