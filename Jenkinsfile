@@ -26,10 +26,10 @@ pipeline {
 	always {
 	  junit '**\\*.xml'
 	}
-	success {
-	  slackSend channel: '#general',
-				color:'good',
-				message 'pipeline completed successfully'
-	}
+//	success {
+//	  slackSend channel: '#general',
+//				color:'good',
+//				message 'pipeline completed successfully'
+//	}
   }
 }
