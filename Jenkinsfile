@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('Build') {
       steps {
         echo 'NPM Install in Web Project'
         bat 'cd Web && npm install'
@@ -11,8 +11,11 @@ pipeline {
         bat 'cd Web && webpack --mode development --display verbose'
       }
     }
-    stage('unit tests') {
+    stage('Unit Tests') {
       steps {
+        echo 'NPM Install in UnitTest Project'
+        bat 'cd UnitTest && npm install'
+        echo 'Run Unit Tests'
         bat '.\\UnitTest\\node_modules\\.bin\\mocha .\\UnitTest\\tests'
       }
     }
