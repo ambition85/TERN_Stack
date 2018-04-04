@@ -21,10 +21,5 @@ pipeline {
         bat 'set JUNIT_REPORT_PATH=.\\UnitTests\\report.xml&& .\\UnitTest\\node_modules\\.bin\\mocha .\\UnitTest\\tests --colors --reporter mocha-jenkins-reporter'
       }
     }
-	post {
-		always {
-			junit '.\\UnitTest\\*.xml'
-		}
-	}
   }
 }
