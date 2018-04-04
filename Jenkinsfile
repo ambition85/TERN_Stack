@@ -29,13 +29,15 @@ pipeline {
     failure {
 	  echo 'Slack Notify of failure'
 	  // Jenkins documentation is incorrect. Brackets are required for slackSend.
-      slackSend(message: 'Pipeline failed', channel: '#jenkins', color: 'bad')
+      slackSend(message: 'Pipeline failed',
+				channel: '#jenkins',
+				color: 'RED')
 	}
 	success {
 	  echo 'Slack Notify of success'
 	  // Jenkins documentation is incorrect. Brackets are required for slackSend.
 	  slackSend(channel: '#jenkins',
-				color:'good',
+				color: 'good',
 				message: 'Pipeline completed successfully')
 	}
   }
