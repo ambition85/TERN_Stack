@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'NPM Install in Web Project'
-        bat 'cd Web && npm install'
+        bat 'npm set progress=false && cd Web && npm install'
         echo 'Transpile TS to JS'
         bat 'tsc --project .\\Web --listEmittedFiles'
         echo 'Run Webpack to Package JS'
@@ -14,7 +14,7 @@ pipeline {
     stage('Unit Tests') {
       steps {
         echo 'NPM Install in UnitTest Project'
-        bat 'cd UnitTest && npm install'
+        bat 'npm set progress=false && cd UnitTest && npm install'
         echo 'Transpile TS to JS'
         bat 'tsc --project .\\UnitTest --listEmittedFiles'
         echo 'Run Unit Tests'
