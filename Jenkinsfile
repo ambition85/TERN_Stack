@@ -1,6 +1,16 @@
 pipeline {
   agent any
-  stages {
+	stages {
+    stage('Build') {
+      steps {
+        echo 'NPM Install in Web Project'
+//        bat 'npm set progress=false && cd Web && npm install'
+        echo 'Transpile TS to JS'
+//        bat 'tsc --project .\\Web --listEmittedFiles'
+        echo 'Run Webpack to Package JS'
+//        bat 'cd Web && webpack --mode development --display verbose'
+      }
+    }
     stage('Unit Tests') {
       steps {
         echo 'NPM Install in UnitTest Project'
@@ -11,21 +21,22 @@ pipeline {
         bat 'set JUNIT_REPORT_PATH=.\\UnitTest\\reports\\report.xml&& .\\UnitTest\\node_modules\\.bin\\mocha .\\UnitTest\\tests --colors --reporter mocha-jenkins-reporter'
       }
     }
-    stage('Send to Slack') {
-      steps {
-        slackSend(message: 'Hello', baseUrl: 'https://maestrodataservices.slack.com/services/hooks/jenkins-ci/', channel: '#general', color: 'good', token: 'JqzmqX0rr0vCAKXIIMwg3N3g')
-      }
-    }
   }
   post {
-    always {
-      junit '**\\*.xml'
-      
-    }
+	always {
+	  junit '**\\*.xml'
+	}
     failure {
-	  echo 'Slack Notifiy'
-      slackSend(message: 'Hello', baseUrl: 'https://maestrodataservices.slack.com/services/hooks/jenkins-ci/', channel: '#general', color: 'good', token: 'JqzmqX0rr0vCAKXIIMwg3N3g')
-      slackSend(message: 'Hello Again', channel: '#general', color: 'good')
+	  echo 'Slack Notify of failure'
+	  // Jenkins documentation is incorrect. Brackets are required for slackSend.
+      slackSend(message: 'Pipeline failed', channel: '#jenkins', color: 'bad')
+	}
+	success {
+	  echo 'Slack Notify of success'
+	  // Jenkins documentation is incorrect. Brackets are required for slackSend.
+	  slackSend(channel: '#jenkins',
+				color:'good',
+				message 'Pipeline completed successfully'
 	}
   }
 }
