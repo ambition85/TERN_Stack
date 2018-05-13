@@ -1,5 +1,5 @@
 // Change test
-// lk-feature test 2
+// lk-feature test
 // mc-feature test
 pipeline {
   agent any
