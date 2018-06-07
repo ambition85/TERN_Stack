@@ -1,8 +1,4 @@
-// Change test
-// lk-feature test-22
-// mc-feature test-2
-// lk-branch
-// lk-branch change 2
+// Jenkins pipeline file.
 pipeline {
   agent any
 	stages {
