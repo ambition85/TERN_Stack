@@ -2,7 +2,7 @@
 import * as ReactDOM from "react-dom";
 
 // Componets we are going to use.
-import { Hello } from "./components/Hello";
+import { Hello } from "./components/hello";
 
 // Root element in DOM where we will mount React.
 var example = document.getElementById('index');

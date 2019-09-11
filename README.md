@@ -1,5 +1,16 @@
 # Typescript, Express, React, Node Stack
 
+## Build and Run
+
+It's easy with Docker, from the root of the project, just create your docker image
+```
+docker build -t tern .
+``` 
+The run it like this
+```
+docker run --name tern -p 3000:3000 /app/Web/node app.js
+```
+
 ## Objective
 
 I wanted a common language stack - or as near as I could get. I've previously been an enthusiast of the MEAN stack. I wanted to move to typescript to get its advantage.
@@ -64,15 +75,10 @@ Uses AXIOS for client side Rest calls.
 TS files with tests much have 'Mocha' in TestFramework file property in Visual Studio.
 
 ## Jenkins Requirements
-(everything in npm\dev??)
-Install the following globally...
-webpack
-webpack-cli
-typescript [not typescript-compiler]
+I'll do this all in the docker container, so just install docker on the Jenkins server.
 
-## Install
-* Node.js - I put this in \Apps\nodejs
-* Change location where global apps are installed in order not to use user\AppData\Roaming so Jenkins can get access.
+## Manual
+If you want to do it without docker just execute each line in the dockerfile directly in you OS (assuming it's a Linux based OS).
 
 ## References
 Mocha TypeScript: https://www.npmjs.com/package/mocha-typescript
