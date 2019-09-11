@@ -10,6 +10,10 @@ The run it like this
 ```
 docker run --name tern -p 3000:3000 /app/Web/node app.js
 ```
+Then simply open your browser and go to...
+```
+localhost:3000
+```
 
 ## Objective
 
