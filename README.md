@@ -82,8 +82,8 @@ Installed WebPackTest Runner extension (https://marketplace.visualstudio.com/ite
 Uses AXIOS for client side Rest calls.
 TS files with tests much have 'Mocha' in TestFramework file property in Visual Studio.
 
-## Jenkins Requirements
-I'll do this all in the docker container, so just install docker on the Jenkins server.
+## Jenkinsfile Requirements
+The Jenkinsfile here was originally set up for a Windows server. It's quite useful because it shows the steps needed to build the app. However I am now favouring docker for hosting so I have done no more work on this, so just install docker on the Jenkins server.
 
 ## Manual
 If you want to do it without docker just execute each line in the dockerfile directly in you OS (assuming it's a Linux based OS).
