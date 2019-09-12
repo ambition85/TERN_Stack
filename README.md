@@ -8,7 +8,7 @@ docker build -t tern .
 ``` 
 The run it like this
 ```
-docker run --name tern -p 3000:3000 tern:latest /app/Web/node app.js
+docker run --name tern -p 3000:3000 tern:latest node /app/Web/node app.js
 ```
 Then simply open your browser and go to...
 ```
