@@ -15,6 +15,10 @@ Then simply open your browser and go to...
 localhost:3000
 ```
 
+## Quick Try
+
+go here http://tern.maestrodataservices.uk
+
 ## Objective
 
 I wanted a common language stack - or as near as I could get. I've previously been an enthusiast of the MEAN stack. I wanted to move to typescript to get its advantage.
