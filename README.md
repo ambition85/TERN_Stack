@@ -1,19 +1,25 @@
 # Typescript, Express, React, Node Stack
 
-## Build and Run
+## Quick Start
 
 It's easy with Docker, from the root of the project, just create your docker image
 ```
-docker build -t tern .
+dockerBuild.sh
 ``` 
 The run it like this
 ```
-docker run --name tern -p 3000:3000 tern:latest node /app/Web/app.js
+dockerRun.sh
 ```
 Then simply open your browser and go to...
 ```
 localhost:3000
 ```
+Now to rebuild and restart quickly run...
+```
+dockerRebuild.sh
+```
+Soon I'll intergrate dockerBuild and dockerRebuild by determing whether the image is already running.
+I'll also trigger the build on a file save.
 
 ## Quick Try
 
