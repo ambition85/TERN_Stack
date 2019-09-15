@@ -1,11 +1,12 @@
 ﻿import * as React from "react";
-import Axios from "axios";
+//import Axios from "axios";
 import CUser from "../../server/models/user";
 
 export interface UserProps {
     id: string;
     firstName: string;
     lastName: string;
+    removeUserClick: any;
 }
 
 // Represent a single user in the list of users render by users.tsx
@@ -17,6 +18,7 @@ export class User extends React.Component<UserProps, {}> {
         console.log("Contructor: User id: " + props.id);
     }
 
+    /*
     removeUserClick(e: any) {
         e.preventDefault();
         console.log("Remove user click. id: " + this.props.id);
@@ -24,13 +26,14 @@ export class User extends React.Component<UserProps, {}> {
             .delete('./api/user/' + this.props.id)
             .then((response) => {
                 console.log("Delete responsex: " + JSON.stringify(response.data));
-
+                this.props.removeUserClick();
             })
             .catch((error) => {
                 console.log("Delete error: " + error);
                 throw error;
             });
     }
+    */
 
     render() {
         return (
@@ -38,10 +41,10 @@ export class User extends React.Component<UserProps, {}> {
                 <div className="card">
                     <div className="card-body">
                         <h3 className="card-title">
-                            User with key {this.props.id}: {this.props.firstName} and {this.props.lastName}.
+                            User with key 3: {this.props.id}: {this.props.firstName} and {this.props.lastName}.
                         </h3>
                         <br />
-                        <button className="btn btn-danger" onClick={(e)=>this.removeUserClick(e)}>Remove</button>
+                        <button className="btn btn-danger" onClick={(e)=>this.props.removeUserClick(this.props.id)}>Remove</button>
                     </div>
                 </div>
                 {/* TODO use styling to create border around a card */}

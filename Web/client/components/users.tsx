@@ -1,4 +1,5 @@
 ﻿import * as React from "react";
+import Axios from "axios";
 
 // NOTE: An alternative here is to import * as User from... then use User.UserProps and User.User in the HTML.
 import { User, UserProps } from "./user";
@@ -14,15 +15,47 @@ export class Users extends React.Component<UsersProps, {}> {
 
     constructor(props) {
         super(props);
+        this.removeUserClick = this.removeUserClick.bind(this);
+        this.state={users:props.users};
         console.log("Contructor: Users");
+    }
+
+    removeUserClick(id: string) {
+        console.log("Users click"+JSON.stringify(this.state.users));
+        console.log("Removed user id: "+id);
+        const index = this.state.users.findIndex(x=>x.id===id);
+        console.log("Index: "+index);
+        if (index>=0) {
+            Axios
+                .delete('./api/user/' + id)
+                .then((response) => {
+                    console.log("Delete response: " + JSON.stringify(response.data));
+                    this.state.users.splice(index,1)
+                
+                    this.setState(
+                        {
+                            users:this.state.users
+                        }
+                    )
+                })
+                .catch((error) => {
+                    console.log("Delete error: " + error);
+                    throw error;
+                });            
+        }
     }
 
     render() {
 
         // Generate an array of user elements.
-        const userList = this.props.users.map((user) => {
-            return (
-                <User key={user.id} id={user.id} firstName={user.firstName} lastName={user.lastName}>
+//        const userList = this.props.users.map((user) => {
+        const userList = this.state.users.map((user) => {
+                return (
+                <User 
+                    key={user.id} id={user.id} 
+                    firstName={user.firstName}
+                    lastName={user.lastName}
+                    removeUserClick={this.removeUserClick}>
                 </User>
             );
         })

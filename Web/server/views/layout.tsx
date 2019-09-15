@@ -49,7 +49,7 @@ export class Layout extends React.Component<LayoutProps, {}> {
                     </nav>
 
                     <div className="container-fluid">
-                        <h1>My  React Typescript Stack</h1>
+                        <h1>My React Typescript Stack 7</h1>
                         {/* Render the users in the child component */}
                         {this.props.children}
                     </div>
