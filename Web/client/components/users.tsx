@@ -1,17 +1,25 @@
 ﻿import * as React from "react";
 import Axios from "axios";
 
+// Server side objects that we will represent in the UI
+import CUser from "../../server/models/user";
+
 // NOTE: An alternative here is to import * as User from... then use User.UserProps and User.User in the HTML.
 import { User, UserProps } from "./user";
 
 // A array of UserProps is required
 export interface UsersProps {
-    users: UserProps[]
+    users: CUser[]
+}
+
+interface UsersState {
+    users: CUser[]
 }
 
 // Represent a list of users on the UI using the user component
 
-export class Users extends React.Component<UsersProps, {}> {
+export class Users extends React.Component<UsersProps, UsersState> {
+    [x: string]: any;
 
     constructor(props) {
         super(props);
@@ -51,8 +59,9 @@ export class Users extends React.Component<UsersProps, {}> {
 //        const userList = this.props.users.map((user) => {
         const userList = this.state.users.map((user) => {
                 return (
-                <User 
-                    key={user.id} id={user.id} 
+                <User
+                    key={user.id}
+                    id={user.id}
                     firstName={user.firstName}
                     lastName={user.lastName}
                     removeUserClick={this.removeUserClick}>
@@ -60,7 +69,6 @@ export class Users extends React.Component<UsersProps, {}> {
             );
         })
         
-
         return (
             <div>
                 {userList}

@@ -5,7 +5,7 @@
 //
 // Have one class per file and define as export default so import in other modules can use this class using any convenient name.
 //
-export default class User {
+export default class CUser {
     id: string;
     firstName: string;
     lastName: string;//<= comment this out and of course the assignment in the constructor to see what the compiler does.

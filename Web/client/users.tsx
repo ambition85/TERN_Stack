@@ -4,7 +4,9 @@ import * as ReactDOM from "react-dom";
 // Component we are going to use.
 import { Users } from "./components/users";
 // Server side objects that we will represent in the UI
-import User from "../server/models/user";
+import CUser from "../server/models/user";
+
+//import { User as UserView,UserProps } from "./components/user";
 
 // Root element in DOM where we will mount React.
 var usersElement = document.getElementById('users');
@@ -13,7 +15,7 @@ console.log("In users.tsx");
 console.log('=> User list as string: ' + usersElement.dataset.users);
 
 // Convert back to objects.
-let users:User[] = JSON.parse(usersElement.dataset.users);
+let users:CUser[] = JSON.parse(usersElement.dataset.users);
 
 console.log('=> User list first object key: ' + users[0].id);
 console.log('=> User list first object first name: ' + users[0].firstName);

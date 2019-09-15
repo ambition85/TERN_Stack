@@ -5,6 +5,7 @@ export interface LayoutProps {
 }
 
 export class Layout extends React.Component<LayoutProps, {}> {
+    [x: string]: any;
     render() {
         return (
             <html lang="en">

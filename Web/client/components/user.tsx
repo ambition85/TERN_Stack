@@ -1,8 +1,9 @@
 ﻿import * as React from "react";
 //import Axios from "axios";
-import CUser from "../../server/models/user";
+//import CUser from "../../server/models/user";
 
 export interface UserProps {
+    key: any;
     id: string;
     firstName: string;
     lastName: string;
