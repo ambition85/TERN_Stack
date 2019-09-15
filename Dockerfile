@@ -16,6 +16,8 @@ RUN npm install
 
 RUN npm install -g typescript
 
+RUN npm install nodemon -g
+
 RUN echo $PWD
 
 WORKDIR /app
