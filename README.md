@@ -25,6 +25,10 @@ I'll also trigger the build on a file save.
 
 Go here http://tern.maestrodataservices.uk
 
+## Docker Image
+
+Available here https://cloud.docker.com/u/marcochristoforou/repository/docker/marcochristoforou/tern
+
 ## Visual Studio
 
 I originally used Visual Studio to build and run this, hence the exitence of an sln file.
