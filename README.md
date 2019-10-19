@@ -1,12 +1,12 @@
 # Typescript, Express, React, Node Stack
 
-## Quick Start
+## Quick Start: No Database
 
 It's easy with Docker, from the root of the project, just create your docker image
 ```
 dockerBuild.sh
 ``` 
-The run it like this
+Then run it like this
 ```
 dockerRun.sh
 ```
@@ -21,7 +21,18 @@ dockerRebuild.sh
 Soon I'll intergrate dockerBuild and dockerRebuild by determing whether the image is already running.
 I'll also trigger the build on a file save.
 
-## Quick Try
+## Quick Start: Database with Docker Compose
+
+I now have a first cut of sequalizer integrated that builds and seeds and Postgres Database running in a container.
+To make it easy to use the following command...
+```
+docker-compose up
+```
+For more details of what's going on look at these parts of the project...
+* /Web/database
+* /Web/dockerEntryPoint.sh
+
+## Quick Try: No Database
 
 Go here http://tern.maestrodataservices.uk
 
@@ -58,6 +69,7 @@ Here's what I've got so far.
 
 There's lot's more I want to do. Here's a list.
 
+* ~~Add ORM (use TypeORM or sequelize.org).~~
 * Smaller docker image for runtime. (Exclude ts files and not required node packages)
 * Jenkins - Add Unit test and UI test steps and deployment step.
 * Jenkins - Triggger pipeline on checkin
@@ -72,7 +84,6 @@ There's lot's more I want to do. Here's a list.
 * Add business layer.
 * ~~Add unit tests framework~~
 * Add UI tests framework.
-* Add ORM (use TypeORM).
 * Try using styles either specific to component or site wide or both.
 * User React router instead of Express router.
 * ~~Refactor into server client side code.~~
@@ -103,3 +114,13 @@ If you want to do it without docker just execute each line in the dockerfile dir
 
 ## References
 Mocha TypeScript: https://www.npmjs.com/package/mocha-typescript
+
+## Sequalizer
+
+From inside the database directory
+
+npx sequelize-cli db:create
+
+npx sequelize-cli db:migrate
+
+npx sequelize-cli db:seed:all
