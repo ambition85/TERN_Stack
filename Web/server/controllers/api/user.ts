@@ -10,9 +10,20 @@ router.get(
     (req: Express.Request, res: Express.Response) => {
         console.log("================ IN USER ROUTER ========================");
 
-        let users = userRep.read();
+        const aPromise = new Promise((resolve, reject) => {
+            let users = userRep.read();
+            resolve(users)
+//            setTimeout(resolve, 5000);
+        });
 
-        res.send(users);
+        aPromise.then((users) => {
+            console.log('I got the users');
+            res.send(users);
+        });
+
+//        let users = userRep.read();
+
+//        res.send(users);
     }
 );
 

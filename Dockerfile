@@ -31,3 +31,5 @@ RUN npm install -g webpack-cli
 WORKDIR /app/Web
 
 RUN webpack --mode development --display verbose
+
+ENTRYPOINT [ "/app/Web/dockerEntryPoint.sh" ]

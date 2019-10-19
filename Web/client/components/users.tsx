@@ -28,7 +28,7 @@ export class Users extends React.Component<UsersProps, UsersState> {
         console.log("Contructor: Users");
     }
 
-    removeUserClick(id: string) {
+    removeUserClick(id: number) {
         console.log("Users click"+JSON.stringify(this.state.users));
         console.log("Removed user id: "+id);
         const index = this.state.users.findIndex(x=>x.id===id);
@@ -58,7 +58,7 @@ export class Users extends React.Component<UsersProps, UsersState> {
         // Generate an array of user elements.
 //        const userList = this.props.users.map((user) => {
         const userList = this.state.users.map((user) => {
-                return (
+            return (
                 <User
                     key={user.id}
                     id={user.id}

@@ -4,7 +4,7 @@
 
 export interface UserProps {
     key: any;
-    id: string;
+    id: number;
     firstName: string;
     lastName: string;
     removeUserClick: any;
@@ -18,23 +18,6 @@ export class User extends React.Component<UserProps, {}> {
         super(props);
         console.log("Contructor: User id: " + props.id);
     }
-
-    /*
-    removeUserClick(e: any) {
-        e.preventDefault();
-        console.log("Remove user click. id: " + this.props.id);
-        Axios
-            .delete('./api/user/' + this.props.id)
-            .then((response) => {
-                console.log("Delete responsex: " + JSON.stringify(response.data));
-                this.props.removeUserClick();
-            })
-            .catch((error) => {
-                console.log("Delete error: " + error);
-                throw error;
-            });
-    }
-    */
 
     render() {
         return (
