@@ -64,6 +64,7 @@ Here's what I've got so far.
 * Configured webpack to bundle javascript based on server side rendered page.
 * Respository factory pattern.
 * Added Cucumberjs with tests run by Grunt.
+* Support for Postgres Database with Sequalize.
 
 ## TODO
 
@@ -77,11 +78,11 @@ There's lot's more I want to do. Here's a list.
 * ~~Change name to TERN stack.~~
 * ~~Publish on GitHub.~~
 * More tidying (remove user from front end on client remove button).
-* Switch to production REACT fo deplot to AWS.
+* Switch to production REACT for deploy to cloud.
 * Deploy best practice (exclude TS files).
 * Automated builds and deploy.
 * Deploy to Azure.
-* Add business layer.
+* ~~Add business layer.~~
 * ~~Add unit tests framework~~
 * Add UI tests framework.
 * Try using styles either specific to component or site wide or both.
@@ -90,9 +91,8 @@ There's lot's more I want to do. Here's a list.
 * Best practice error handling in REST calls
 * Intellisense code completion for bootstrap.
 * ~~Understand package.json scripts start (I don't think this is quite correct or properly used).~~
-* Live updating so I don't need to restart Visual Studio on every change.
-* Migrate to WebStorm (for comparison of IDE experiences).
-* Migrate to VSCode (for comparison of IDE experiences).
+* ~~Live updating so I don't need to restart Visual Studio on every change.~~
+* ~~Migrate to VSCode (for comparison of IDE experiences).~~
 * ~~Client side REST client.~~
 * ~~Server side REST API.~~
 * ~~Event binding on client.~~
