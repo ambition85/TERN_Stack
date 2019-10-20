@@ -10,4 +10,4 @@ npx sequelize-cli db:migrate
 
 npx sequelize-cli db:seed:all
 
-nodemon --delay 5 /app/Web/app.js
+nodemon --delay 15 /app/Web/app.js
