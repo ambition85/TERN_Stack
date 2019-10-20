@@ -14,6 +14,7 @@ export default class UserRep implements Repository.Interface {
         //this.dbConnection=dbConnection;
 
         // Define the table. Note, it automatically pluralises the name.
+        // We reuse the user db model that is also used to generate the database.
         this.usersTable=UserDb(dbConnection,Db.DataTypes);
         /*
         this.usersTable=
@@ -66,7 +67,7 @@ export default class UserRep implements Repository.Interface {
             this.usersTable.findAll().then(users => {
                 console.log("All users:", JSON.stringify(users, null, 4));
 
-                // Map users from database to user model.
+                // Map user database model to user business model.
                 const userList=
                 users.map((user) => {
                     return new User(user.id,user.firstName,user.lastName);                    
