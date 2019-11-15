@@ -1,17 +1,22 @@
 ﻿/// <binding AfterBuild='Run - Development' />
 var webpack = require('webpack');
 var WebpackNotifierPlugin = require('webpack-notifier');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
+// Output to dist directory.
 module.exports = {
 //    entry: "./client/index.tsx",
     entry: {
-        index: "./client/index.js",
-        users: './client/users.js'
+//        index: "./client/index.js",
+//        users: './client/users.js'
+        index: "./dist/client/index.js",
+        users: './dist/client/users.js'
     },
 
     output: {
         filename: "[name]-bundle.js",
-        path: __dirname + "/client/public/javascripts"
+//        path: __dirname + "/client/public/javascripts"
+        path: __dirname + "/dist/client/public/javascripts"
     },
 
     // Enable sourcemaps for debugging webpack's output.
@@ -65,6 +70,11 @@ module.exports = {
 //        new webpack.DefinePlugin({
 //            'process.env.NODE_ENV': JSON.stringify('development')
 //        }),
+        // Copy over the parts that are not part of the build.
+        new CopyWebpackPlugin([
+            {from:__dirname+'/database/config/',
+             to:__dirname+'/dist/database/config/'} 
+        ]),
         new WebpackNotifierPlugin({ title: 'Webpack' })
     ],
 };

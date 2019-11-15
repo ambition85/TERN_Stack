@@ -12,16 +12,17 @@ app.set('views', path.join(__dirname, 'server/views'));
 app.engine('js', require('./server/engine'));
 app.set('view engine', 'js');
 
-app.use(express.static(path.join(__dirname, 'client/public')));
+//app.use(express.static(path.join(__dirname, 'client/public')));
+app.use(express.static(path.join(__dirname, 'dist/client/public')));
 
-console.log("X="+__dirname);
+console.log("Root directory="+__dirname);
 
 app.use('/', views);
 app.use('/api/user', apiUser);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-    var err = new Error('Not Found');
+    var err = new express.Error('Not Found');
     err['status'] = 404;
     next(err);
 });

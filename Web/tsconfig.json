@@ -3,8 +3,9 @@
     "sourceMap": true,
     "module": "commonjs",
     "target": "es6",
-    "moduleResolution": "Node",
-    "jsx": "react"
+    "moduleResolution": "node",
+    "jsx": "react",
+    "outDir": "dist"
   },
   "exclude": [
     "node_modules"
