@@ -65,6 +65,7 @@ Here's what I've got so far.
 * Respository factory pattern.
 * Added Cucumberjs with tests run by Grunt.
 * Support for Postgres Database with Sequalize.
+* Final release code written to dist directory, ready for deployment.
 
 ## TODO
 
@@ -77,16 +78,15 @@ There's lot's more I want to do. Here's a list.
 * Jenkins - integrate with slack
 * ~~Change name to TERN stack.~~
 * ~~Publish on GitHub.~~
-* More tidying (remove user from front end on client remove button).
+* ~~More tidying (remove user from front end on client remove button).~~
 * Switch to production REACT for deploy to cloud.
 * Deploy best practice (exclude TS files).
 * Automated builds and deploy.
-* Deploy to Azure.
 * ~~Add business layer.~~
 * ~~Add unit tests framework~~
 * Add UI tests framework.
 * Try using styles either specific to component or site wide or both.
-* User React router instead of Express router.
+* User React client side router instead of Express router.
 * ~~Refactor into server client side code.~~
 * Best practice error handling in REST calls
 * Intellisense code completion for bootstrap.
@@ -97,7 +97,7 @@ There's lot's more I want to do. Here's a list.
 * ~~Server side REST API.~~
 * ~~Event binding on client.~~
 * (May be) Might be nice to use PUG instead of HTML in React components
-* ~~Tidy directory structure (do I need dist anymore).~~
+* ~~Tidy directory structure.~~
 
 ## NOTES:
 Eventually figured out that VS uses it's own compiler so Webpack should be used simply to package everything up into bundle.js
